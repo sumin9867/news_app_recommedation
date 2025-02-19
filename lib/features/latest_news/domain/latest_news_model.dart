@@ -37,8 +37,11 @@ class Results {
   String? link;
   String? pubDate;
   String? imageUrl;
+<<<<<<< HEAD
   String? description;
 
+=======
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
   List<String>? keywords;
 
   Results({
@@ -48,7 +51,10 @@ class Results {
     this.pubDate,
     this.imageUrl,
     this.keywords,
+<<<<<<< HEAD
     this.description,
+=======
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
   });
 
   Results.fromJson(Map<String, dynamic> json) {
@@ -56,7 +62,10 @@ class Results {
     title = json['title'];
     link = json['link'];
     pubDate = json['pubDate'];
+<<<<<<< HEAD
     description=json['description'];
+=======
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
     imageUrl = json['image_url'];
     keywords =
         json['keywords'] != null ? List<String>.from(json['keywords']) : null;
@@ -67,8 +76,11 @@ class Results {
     data['article_id'] = articleId;
     data['title'] = title;
     data['link'] = link;
+<<<<<<< HEAD
     data['description'] = description;
 
+=======
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
     data['pubDate'] = pubDate;
     data['image_url'] = imageUrl;
     data['keywords'] = keywords;

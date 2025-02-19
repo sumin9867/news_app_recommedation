@@ -56,15 +56,35 @@ class _NewsBottomNavigationBarState extends State<NewsBottomNavigationBar> {
       ),
       bottomNavigationBar: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+<<<<<<< HEAD
         
+=======
+        decoration: BoxDecoration(
+          color: AppColor.selectedDropDown,
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 2,
+              blurRadius: 4,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
           child: BottomNavigationBar(
             currentIndex: currentPageIndex,
             onTap: onNavBarTap,
             selectedItemColor: AppColor.primary,
+<<<<<<< HEAD
             // unselectedItemColor: Colors.grey,
             // backgroundColor: Colors.transparent,
+=======
+            unselectedItemColor: Colors.grey,
+            backgroundColor: Colors.transparent,
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
                 icon: Icon(Icons.newspaper_rounded, size: 24),
@@ -76,7 +96,15 @@ class _NewsBottomNavigationBarState extends State<NewsBottomNavigationBar> {
                 label: '',
                 tooltip: '',
               ),
+<<<<<<< HEAD
         
+=======
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.bookmark_add_rounded, size: 24),
+                label: 'Incident',
+                tooltip: '',
+              ),
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
               BottomNavigationBarItem(
                 icon: CircleAvatar(
                   radius: 16,

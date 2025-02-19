@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:cached_network_image/cached_network_image.dart'; // Import CachedNetworkImage
 import 'package:news/core/theme/responsive_size.dart';
 import 'package:news/features/latest_news/domain/latest_news_model.dart';
 import 'package:news/features/latest_news/presentation/deatil_page.dart';
+=======
+import 'package:news/core/theme/responsive_size.dart';
+import 'package:news/features/latest_news/domain/latest_news_model.dart';
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
 import 'package:timeago/timeago.dart' as timeago;
 
 class LatestNewsListView extends StatelessWidget {
@@ -21,6 +26,7 @@ class LatestNewsListView extends StatelessWidget {
 
         return Padding(
           padding: EdgeInsets.only(left: ScreenUtils.getWidth(context, .02)),
+<<<<<<< HEAD
           child: GestureDetector(
 
             onTap: ()=> Navigator.push(
@@ -108,6 +114,74 @@ class LatestNewsListView extends StatelessWidget {
                 ),
               ],
             ),
+=======
+          child: Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  data?.imageUrl ?? "",
+                  width: ScreenUtils.getWidth(context, .4),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.black.withOpacity(0.7),
+                        Colors.black.withOpacity(0)
+                      ],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.center,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        data?.title ?? "",
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.published_with_changes_rounded,
+                            size: 20,
+                            color: Colors.white,
+                          ),
+                          const SizedBox(width: 4),
+                          Text(
+                            pubDateParsed != null
+                                ? timeago.format(pubDateParsed,
+                                    locale: 'en_short')
+                                : 'Unknown',
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+>>>>>>> 47f703e8b9d4b63d744e69fef8c73d0b80ff435d
           ),
         );
       },
